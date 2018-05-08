@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+#This program outputs first n fibonacci numbers, given n
+
+#Take integer input n from the user
+n=int(input('How many Fibonacci numbers to print? '))
+#determine the first two numbers and their position i in the sequence
+f1=1
+f2=1
+i=2
+#Set the if loop: if input number is less/equal to zero
+if n<=0:
+#If TRUE, print warning!
+    print('Enter a positive number!')
+#otherwise if input number is 1
+elif n==1:
+#If TRUE then print the first number
+    print('Fibonacci series requested:')
+    print(f1)
+#otherwise if input number is more then 2 but less then 93
+elif n>=2 and n<=92:
+#If TRUE print first two fibonacci numbers and go into while loop
+    print('Fibonacci series requested:')
+    print(f1)
+    print(f2)
+#while loop when position i is less then input number
+    while i < n:
+#determine the next fibonacci number and print it
+        f3=f1+f2
+        print(f3)
+#Redefine first two variables for the loop
+        f1=f2
+        f2=f3
+        i=i+1
+#otherwise (if n>=2 but n>=92) print the warning
+else:
+    print('Input must be less than 93.')
