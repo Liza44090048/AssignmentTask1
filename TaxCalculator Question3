@@ -1,0 +1,44 @@
+#!/usr/bin/env python3
+
+#This program calculates tax libility and income after tax based 
+#on the gross income
+
+#Set limits for income tax rates
+l1=180000
+l2=87000
+l3=37000
+l4=18200
+
+#Set input of the user as a int to be able to compare
+income=int(input('Enter your annual gross income: '))
+
+#Set tax liabilities calculations for each income range
+taxl1=54532+0.45*(income-l1)
+taxl2=19822+0.37*(income-l2)
+taxl3=3572+0.325*(income-l3)
+taxl4=0.19*(income-l4)
+
+#Create an if loop, so if income>=180000
+if income >= l1:
+#If TRUE then use calculations for last income range and print results
+    print('Your tax liabilities are: $' + str(taxl1))
+    print('Your after tax income is: $' + str(income-taxl1))
+#otherwise check if income>=87000
+elif income >= l2:
+#If TRUE then print results
+    print('Your tax libilities are: $' + str(taxl2))
+    print('Your after tax income is: $' + str(income-taxl2))
+#otherwise check if income>=37000
+elif income >= l3:
+#If TRUE then print results
+    print('Your tax libilities are: $' + str(taxl3))
+    print('Your after tax income is: $' + str(income-taxl3))
+#otherwise check if income>=18200
+elif income >= l4:
+#If TRUE then print results
+    print('Your tax libilities are: $' + str(taxl4))
+    print('Your after tax income is: $' + str(income-taxl4))
+#otherwise there is no tax rate applyied - print results
+else:
+    print('Your tax libilities are: $0.00')
+    print('Your after tax income is: $' + str(income))
