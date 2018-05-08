@@ -26,19 +26,19 @@ if income >= l1:
 #otherwise check if income>=87000
 elif income >= l2:
 #If TRUE then print results
-    print('Your tax libilities are: $' + str(taxl2))
+    print('Your tax liabilities are: $' + str(taxl2))
     print('Your after tax income is: $' + str(income-taxl2))
 #otherwise check if income>=37000
 elif income >= l3:
 #If TRUE then print results
-    print('Your tax libilities are: $' + str(taxl3))
+    print('Your tax liabilities are: $' + str(taxl3))
     print('Your after tax income is: $' + str(income-taxl3))
 #otherwise check if income>=18200
 elif income >= l4:
 #If TRUE then print results
-    print('Your tax libilities are: $' + str(taxl4))
+    print('Your tax liabilities are: $' + str(taxl4))
     print('Your after tax income is: $' + str(income-taxl4))
-#otherwise there is no tax rate applyied - print results
+#otherwise there is no tax rate applied - print results
 else:
-    print('Your tax libilities are: $0.00')
+    print('Your tax liabilities are: $0.00')
     print('Your after tax income is: $' + str(income))
